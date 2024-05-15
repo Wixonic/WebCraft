@@ -2,7 +2,7 @@ blank_issues_enabled: true
 
 contact_links:
   - name: WebCraft Community Forum
-    url: https://github.com/Wix-Productions/WebCraft/discussions/categories/q-a
+    url: https://github.com/Wixonic/WebCraft/discussions/categories/q-a
     about: Ask and answer questions here.
   - name: Official WebCraft Documentation
-    url: https://github.com/Wix-Productions/WebCraft/wiki
+    url: https://github.com/Wixonic/WebCraft/wiki

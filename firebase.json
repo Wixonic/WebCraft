@@ -6,5 +6,15 @@
       "**/.*",
       "**/node_modules/**"
     ]
+  },
+  "emulators": {
+    "hosting": {
+      "port": 12000
+    },
+    "ui": {
+      "enabled": true,
+      "port": 12001
+    },
+    "singleProjectMode": true
   }
 }
