@@ -1,0 +1,49 @@
+name: Bug Report
+description: Created to solve a bug
+labels: ["Bug"]
+
+body:
+  - type: markdown
+    attributes:
+      value: "## Hello world!"
+  - type: markdown
+    attributes:
+      value: Thank you for taking the time to help us!
+  - type: textarea
+    attributes:
+      label: Description
+      placeholder: A concise description of your problem.
+    validations:
+      required: true
+  - type: dropdown
+    attributes:
+      label: OS
+      description: |
+        Choose the **OS you use**.
+        If it doesn't appear, it may not be supported.
+      options:
+        - iOS / iPadOS
+        - Android
+        - MacOS
+        - Windows
+        - Linux
+        - Other
+    validations:
+      required: true
+  - type: dropdown
+    attributes:
+      label: Browser
+      description: |
+        Choose the **browser you use**.
+        If it doesn't appear, it may not be supported.
+      options:
+        - Safari
+        - Chrome
+        - Firefox
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Something else?
+      placeholder: Any other information

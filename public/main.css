@@ -1,0 +1,39 @@
+@import url("https://rsms.me/inter/inter.css");
+
+* {
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	-ms-appearance: none;
+	appearance: none;
+	
+	-webkit-touch-callout: none;
+	-webkit-tap-highlight-color: transparent;
+	
+	box-sizing: border-box;
+	outline: none;
+	touch-action: manipulation;
+	
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background: #F2F2FF;
+
+	font-family: "Inter", Arial, Helvetica, sans-serif;
+	font-weight: 400;
+}
+
+a {
+	color: #06F;
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}

@@ -1,0 +1,32 @@
+body {
+	margin-top: 2rem;
+}
+
+
+header {
+	position: fixed;
+	top: 0;
+	left: 0;
+
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+	height: 2rem;
+	width: 100%;
+
+	background: inherit;
+
+	padding: 0 0.5rem;
+}
+
+header img#logo {
+	display: block;
+	
+	width: 2rem;
+	height: 2rem;
+
+	margin: 0.2rem;
+
+	cursor: pointer;
+}

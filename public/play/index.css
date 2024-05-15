@@ -1,0 +1,387 @@
+@import url("https://fonts.googleapis.com/css2?family=Fira+Code");
+
+* {
+	overflow: hidden;
+}
+
+html,
+body,
+canvas {
+	background: #222;
+
+	color: #FFF;
+
+	touch-action: none;
+}
+
+ErrorWindow,
+ErrorWindow > * {
+	display: block;
+}
+
+ErrorWindow {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+
+	position: fixed;
+	top: 0;
+	left: 0;
+
+	width: 100%;
+	height: 100%;
+
+	background: #222;
+
+	text-align: center;
+
+	z-index: 6;
+}
+
+ErrorWindow name {
+	font-size: 1.3rem;
+	font-weight: bold;
+
+	margin: 0.75rem 0;
+}
+
+ErrorWindow content {
+	margin: 0.75rem 0;
+}
+
+ErrorWindow error {
+	font-family: "Fira Code", Menlo, monospace;
+	font-size: 0.8rem;
+
+	margin: 2rem 1.5rem;
+}
+
+canvas {
+	display: block;
+
+	position: fixed;
+	top: 0;
+	left: 0;
+}
+
+ui {
+	z-index: 2;
+}
+
+ui cursor:before {
+	content: "+";
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	position: fixed;
+	top: 0;
+	left: 0;
+
+	font-size: 2rem;
+
+	width: 100%;
+	height: 100%;
+
+	margin: 0;
+	padding: 0;
+
+	z-index: 1;
+}
+
+ui joystick {
+	--size: 8rem;
+
+	position: fixed;
+	bottom: 2rem;
+	left: 2rem;
+
+	width: var(--size);
+	height: var(--size);
+
+	background: #222;
+	
+	border: 0.1rem solid #555;
+	border-radius: var(--size);
+
+	opacity: 0.5;
+
+	z-index: 2;
+}
+
+ui joystick stick {
+	--sticksize: 3rem;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	position: fixed;
+	bottom: calc(2rem + var(--size) / 2 - var(--sticksize) / 2);
+	left: calc(2rem + var(--size) / 2 - var(--sticksize) / 2);
+
+	width: var(--sticksize);
+	height: var(--sticksize);
+
+	background: #555;
+
+	color: #000;
+	font-size: calc(var(--sticksize) / 2);
+	
+	border: 0.1rem solid #888;
+	border-radius: var(--sticksize);
+
+	opacity: 0.8;
+
+	z-index: 2;
+}
+
+ui button {
+	--size: 2.5rem;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	position: fixed;
+
+	width: var(--size);
+	height: var(--size);
+
+	background: #555;
+
+	color: #000;
+	font-size: calc(var(--size) / 2);
+	
+	border: 0.1rem solid #888;
+	border-radius: var(--size);
+
+	opacity: 0.5;
+
+	z-index: 2;
+}
+
+#breakBtn {
+	bottom: 6.5rem;
+	right: 1.25rem;
+}
+
+#jumpBtn {
+	--size: 5rem;
+
+	bottom: 1.5rem;
+	right: 1.5rem;
+}
+
+#menuBtn {
+	top: 0.5rem;
+	right: 0.5rem;
+}
+
+#sneakBtn {
+	--size: 3.5rem;
+
+	bottom: 4.25rem;
+	right: 6.5rem;
+}
+
+#useBtn {
+	bottom: 6.5rem;
+	right: 4.25rem;
+}
+
+.infos {
+	display: block;
+
+	position: fixed;
+	top: 0;
+	left: 0;
+
+	font-family: "Fira Code", Menlo, monospace;
+	font-size: 0.6rem;
+
+	z-index: 1;
+}
+
+#startWindow {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	position: fixed;
+	top: 0;
+	left: 0;
+
+	width: 100%;
+	height: 100%;
+
+	background: #222;
+
+	z-index: 5;
+}
+
+#menu {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	position: fixed;
+	top: 0;
+	left: 0;
+
+	width: 100%;
+	height: 100%;
+
+	background: rgba(0,0,0,0.66);
+
+	z-index: 3;
+}
+
+#menu container {
+	display: grid;
+	grid-template-columns: max-content;
+	grid-auto-rows: max-content;
+	gap: 0.2rem;
+}
+
+#menu button {
+	--radius: 0.5rem;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	width: 100%;
+	height: 100%;
+
+	background: rgba(0,0,0,0.5);
+	
+	color: #FFF;
+	font-size: 1.5rem;
+
+	border: none;
+
+	padding: 0.4rem 0.8rem;
+}
+
+#menu button:first-child {
+	border-top-left-radius: var(--radius);
+	border-top-right-radius: var(--radius);
+}
+
+#menu button:last-child {
+	border-bottom-left-radius: var(--radius);
+	border-bottom-right-radius: var(--radius);
+}
+
+settings {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+
+	position: fixed;
+	top: 0;
+	left: 0;
+
+	width: 100%;
+	height: 100%;
+
+	background: #222;
+	
+	text-align: center;
+
+	z-index: 4;
+}
+
+settings > div {
+	margin: 0.3rem 0;
+}
+
+settings button#exit-settings {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	
+	position: fixed;
+	top: 0.2rem;
+	right: 0.2rem;
+	
+	width: 1.3rem;
+	height: 1.3rem;
+	
+	background: none;
+	
+	color: white;
+	font-size: 1.3rem;
+	
+	border: none;
+	
+	cursor: pointer;
+}
+
+settings input[type="range"] {
+	width: min(95vw,20rem);
+	height: 0.3rem;
+	
+	background: #666;
+	
+	border-radius: 1rem;
+	
+	cursor: pointer;
+	opacity: 0.5;
+	overflow: visible;
+	vertical-align: middle;
+	
+	transition: opacity 0.25s;
+}
+
+settings input[type="range"]:hover {
+	opacity: 1;
+}
+
+settings input[type="range"]::-webkit-slider-thumb,
+settings input[type="range"]::-moz-range-thumb {
+	display: block;
+	
+	width: 1rem;
+	height: 1rem;
+	
+	background: #FFF;
+	
+	border-radius: 0;
+}
+
+settings input[type="checkbox"] {
+	display: none;
+}
+
+settings .checkbox {
+	display: inline-block;
+
+	width: 1rem;
+	height: 1rem;
+
+	background: transparent;
+
+	color: transparent;
+	font-size: 0.8rem;
+
+	border: 0.1rem solid #888;
+	border-radius: 0.1rem;
+	
+	vertical-align: middle;
+}
+
+settings .checkbox[checked] {
+	color: #2A2;
+	border-color: #2A2;
+}
+
+settings .checkbox svg {
+	display: block;
+	
+	margin: auto;
+}

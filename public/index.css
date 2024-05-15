@@ -1,0 +1,248 @@
+body {
+	margin-top: 2rem;
+}
+
+
+header {
+	position: fixed;
+	top: 0;
+	left: 0;
+
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+	height: 2rem;
+	width: 100%;
+
+	background: inherit;
+
+	padding: 0 0.5rem;
+}
+
+header img#logo {
+	display: block;
+	
+	width: 2rem;
+	height: 2rem;
+
+	margin: 0.2rem;
+}
+
+header > span {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+header button {
+	display: block;
+
+	width: 2rem;
+	height: 2rem;
+
+	background: none;
+
+	font-size: 1.5rem;
+
+	border: none;
+
+	margin: 0 0.25rem;
+
+	cursor: pointer;
+}
+
+header button span {
+	display: none;
+}
+
+header button span.whenClosed {
+	display: block;
+}
+
+header button.open span.whenOpen {
+	display: block;
+}
+
+header button.open span.whenClosed {
+	display: none;
+}
+
+
+div#notifications {
+	display: none;
+
+	position: fixed;
+	top: 2rem;
+	right: 1rem;
+
+	width: 20rem;
+	height: 12.5rem;
+
+	background: inherit;
+
+	border: 0.1rem solid #888;
+	border-radius: 0.5rem;
+
+	overflow: scroll;
+	overflow-x: hidden;
+}
+
+div#notifications.open {
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-auto-rows: 1fr;
+}
+
+div#notifications special {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	width: 100%;
+	height: 100%;
+
+	color: #888;
+	font-style: italic;
+	font-weight: 500;
+	text-align: center;
+
+	opacity: 0.5;
+
+	padding: 0.5rem;
+}
+
+div#notifications item {
+	display: grid;
+	grid-template-columns: 1fr 2rem;
+	grid-template-rows: 1.8rem 1.2rem;
+
+	width: 100%;
+	height: 2.5rem;
+
+	word-break: keep-all;
+}
+
+div#notifications item b {
+	
+}
+
+div#notifications item p {
+
+}
+
+div#notifications item icon {
+
+}
+
+nav#menu {
+	position: fixed;
+	top: 2rem;
+	right: 0;
+
+	display: grid;
+	grid-template-columns: max-content;
+	grid-template-rows: 2.2rem;
+
+	width: min-content;
+	height: calc(100% - 2rem);
+
+	background: inherit;
+
+	font-size: 1.5rem;
+	word-break: keep-all;
+	font-weight: 500;
+	text-align: right;
+
+	opacity: 0;
+	transform: translateX(100%);
+
+	transition: opacity 0.3s linear, transform 0.3s ease;
+
+	padding: 0 0.3rem;
+}
+
+nav#menu.open {
+	opacity: 1;
+	transform: translateX(0);
+}
+
+nav#menu > a {
+	display: flex;
+	justify-content: right;
+	align-items: center;
+
+	width: max-content;
+	height: 2.2rem;
+
+	color: inherit;
+	word-break: keep-all;
+
+	border-top: 0.1rem solid #888;
+
+	overflow: hidden;
+
+	padding: 0 0.5rem;
+}
+
+nav#menu > a:first-child {
+	border: none;
+}
+
+nav#menu > a:hover {
+	text-decoration: none;
+}
+
+nav#menu > a icon {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	width: 2rem;
+	height: 2rem;
+
+	font-size: 1.5rem;
+
+	margin: 0 0 0 0.5rem;
+}
+
+img#banner {
+	display: block;
+
+	width: 48vw;
+	height: 27vw;
+
+	margin: 0 auto 1rem auto;
+}
+
+button#play {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	width: 8rem;
+	height: 3rem;
+
+	background: #06F;
+
+	color: #FFF;
+	font-weight: 600;
+
+	border: none;
+	border-radius: 1rem;
+	
+	margin: 1rem auto;
+
+	cursor: pointer;
+
+	transition: transform 0.2s ease-in;
+}
+
+button#play:hover {
+	transform: scale(1.1);
+}
+
+button#play svg {
+	display: block;
+	margin: auto 0 auto 0.5rem;
+}

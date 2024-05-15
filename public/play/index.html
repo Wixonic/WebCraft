@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en_US" lang="en_US">
+	
+	<head>
+		
+		<title>Play | WebCraft</title>
+		
+		<meta charset="utf-8" />
+		<meta http-equiv="content-type" content="text/html; charset=utf-8">
+		
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0, viewport-fit=cover" />
+
+		<meta name="author" content="Wixonic, contact@wixonic.fr" />
+		<meta name="description" content="Farm, Craft, Build." />
+		<meta name="robots" content="noindex,follow" />
+		
+		<meta name="og:description" content="Farm, Craft, Build." />
+		<meta name="og:email" content="contact@wixonic.fr"/>
+		<meta name="og:locale" content="en_US" />
+		<meta name="og:title" content="WebCraft" />
+		<meta name="og:type" content="website" />
+		<meta name="og:url" content="https://webcraft.wixonic.fr" />
+
+		<meta rel="canonical" href="https://webcraft.wixonic.fr" />
+		
+		<meta name="og:image" content="/assets/logo.png" />
+		<meta property="og:image:type" content="image/png" />
+		<meta name="og:image" content="/assets/logo.svg" />
+		<meta property="og:image:type" content="image/svg+xml" />
+		
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+
+		<link rel="icon" type="image/png" href="/assets/logo.png" />
+		<link rel="icon" type="image/svg+xml" href="/assets/logo.svg" />
+
+		<link rel="stylesheet" href="/main.css" />
+		<link rel="stylesheet" href="index.css" />
+
+		<script src="https://assets.wixonic.fr/libraries/three.js"></script>
+		<script src="https://assets.wixonic.fr/libraries/seedrandom.js"></script>
+		<script src="https://kit.fontawesome.com/d7730cd825.js" crossorigin="anonymous"></script>
+
+		<script type="module" src="index.js"></script>
+
+	</head>
+	
+	<body>
+
+		<div id="startWindow">
+			
+			Loading...
+
+		</div>
+
+		<ui>
+
+			<cursor></cursor>
+
+		</ui>
+		
+		<div class="infos"></div>
+
+		<div id="menu">
+			
+			<container>
+
+				<button id="resume">Resume</button>
+				<button id="settings">Settings</button>
+				<button>Save & Quit</button>
+
+			</container>
+
+		</div>
+
+		<settings>
+
+			<div><button id="exit-settings"><i class="fa-solid fa-times"></i></button></div>
+
+			<div><input id="render-distance" type="range" min="1" max="8" step="0.01" /><br /><span id="render-distance-display">0</span> chunks</div>
+
+			<div><label>Low quality: </label><div id="low-quality" class="checkbox"><i class="fa-duotone fa-check"></i></div></div>
+
+		</settings>
+
+	</body>
+	
+</html>
